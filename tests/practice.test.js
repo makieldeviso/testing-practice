@@ -1,4 +1,4 @@
-import { capitalize, reverseString } from "../apps/practice-app";
+import { capitalize, reverseString, calculator } from "../apps/practice-app";
 
 test (
     'capitalize-test-1',
@@ -20,7 +20,6 @@ test (
     }
 )
 
-
 test ('reverseString-test-1', () => {
     expect (
         reverseString ('supernatural')
@@ -34,4 +33,46 @@ test ('reverseString-test-2', () => {
         reverseString ('Intense')
         
     ).toMatch('esnetni');
+})
+
+// calculator add
+test ('calculator-test-1', () => {
+    expect(
+        calculator.add(5,6)
+    ).toBe(11)
+})
+
+// Check for parsing
+test ('calculator-test-2', () => {
+    expect(
+        calculator.add('5',6)
+    ).toBe(11)
+})
+
+// Check for parsing
+test ('calculator-test-3', () => {
+    expect(
+        calculator.add('12','6')
+    ).toBe(18)
+})
+
+// calculator subtract
+test ('calculator-test-4', () => {
+    expect(
+        calculator.subtract(5,6)
+    ).toBe(-1);
+})
+
+// calculator divide
+test ('calculator-test-5', () => {
+    expect(
+        calculator.divide(5,6)
+    ).toBeCloseTo(0.833);
+})
+
+// calculator multiply
+test ('calculator-test-6', () => {
+    expect(
+        calculator.multiply(5,6)
+    ).toBe(30);
 })
