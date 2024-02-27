@@ -1,6 +1,7 @@
 import capitalize from "../apps/capitalize";
 import reverseString from "../apps/reverseString";
 import calculator from "../apps/calculator";
+import caesarCipher from "../apps/caesarCipher";
 
 test (
     'capitalize-test-1',
@@ -77,4 +78,17 @@ test ('calculator-test-6', () => {
     expect(
         calculator.multiply(5,6)
     ).toBe(30);
+})
+
+// Caesars cipher test
+test ('caesarCipher-test-1', () => {
+    expect(
+        caesarCipher('Hello World', 5)
+    ).toMatch('MJQQT BTWQI')
+})
+
+test ('caesarCipher-test-2', () => {
+    expect(
+        caesarCipher('Hello2World!', 180)
+    ).toMatch('FCJJM2UMPJB!')
 })
