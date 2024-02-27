@@ -1,4 +1,6 @@
-import { capitalize, reverseString, calculator } from "../apps/practice-app";
+import capitalize from "../apps/capitalize";
+import reverseString from "../apps/reverseString";
+import calculator from "../apps/calculator";
 
 test (
     'capitalize-test-1',

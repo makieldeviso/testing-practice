@@ -1,22 +1,3 @@
-const capitalize = function (string) {
-    const firstLetter = string.slice(0,1);
-    const restLetters = string.slice(1);
-
-    return `${firstLetter.toUpperCase()}${restLetters}`
-}
-
-const reverseString = function (string) {
-    const stringArray = string.split('');
-    let reverseStringArray = [];
-    stringArray.forEach(char => {
-        const lowerCase = char.toLowerCase();
-        reverseStringArray.unshift(lowerCase);
-    })
-
-    const newReverseString = reverseStringArray.join('');
-    return newReverseString;
-}
-
 // class for calculator
 class CalcCreate {
     constructor () {}
@@ -51,4 +32,4 @@ class CalcCreate {
 // Execute new CalcCreate to make calculator object
 const calculator = new CalcCreate();
 
-export { capitalize, reverseString, calculator}
+export default calculator
