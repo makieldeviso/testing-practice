@@ -5,4 +5,4 @@ const capitalize = function (string) {
     return `${firstLetter.toUpperCase()}${restLetters}`
 }
 
-export { capitalize }
+export default capitalize
