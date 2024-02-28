@@ -2,6 +2,7 @@ import capitalize from "../apps/capitalize";
 import reverseString from "../apps/reverseString";
 import calculator from "../apps/calculator";
 import caesarCipher from "../apps/caesarCipher";
+import analyzeArray from "../apps/analyzeArray";
 
 test (
     'capitalize-test-1',
@@ -91,4 +92,34 @@ test ('caesarCipher-test-2', () => {
     expect(
         caesarCipher('Hello2World!', 180)
     ).toMatch('FCJJM2UMPJB!')
+})
+
+// Analyze Array tests
+test ('analyzeArray-test-1', () => {
+    expect (
+        analyzeArray([5, 6, 10, 22, 66])
+    ).toEqual({
+        average: 21.8,
+        min: 5,
+        max: 66,
+        length: 5
+    })
+})
+
+test ('analyzeArray-test-2', () => {
+    expect (
+        analyzeArray([50, '30', 11, 22, '69', 2])
+    ).toEqual({
+        average: 30.667,
+        min: 2,
+        max: 69,
+        length: 6
+    })
+})
+
+test ('analyzeArray-test-3', () => {
+    expect ( () => {
+            analyzeArray([5, 'Six', 10, 22, '66'])
+        }
+    ).toThrow()
 })
